@@ -6,6 +6,7 @@ const withPWA = require("next-pwa")({
 });
 
 module.exports = withPWA({
+  ignoreDuringBuilds: true,
   webpack: (config) => {
     config.module.rules.push({
       test: /\.mp3$/,
