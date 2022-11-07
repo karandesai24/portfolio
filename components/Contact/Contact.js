@@ -9,42 +9,43 @@ import styles from "./Contact.module.scss";
 const filter = new Filter();
 filter.removeWords("hell", "god", "shit");
 
-const error = () =>
-  toast.error("Error sending your message", {
-    id: "error",
-    style: {
-      borderRadius: "10px",
-      background: "#333",
-      color: "#fff",
-    },
-  });
-
-const success = () =>
-  toast.success("Message sent successfully", {
-    id: "success",
-    style: {
-      borderRadius: "10px",
-      background: "#333",
-      color: "#fff",
-    },
-  });
-
-const Contact = () => {
+function Contact() {
   const initialState = { name: "", email: "", message: "" };
   const [formData, setFormData] = useState(initialState);
   const [mailerResponse, setMailerResponse] = useState("not initiated");
   const [isSending, setIsSending] = useState(false);
   const buttonEl = useRef(null);
 
-  const empty = () => console.log("c");
-  toast.error("Please fill the required fields", {
-    id: "error",
-    style: {
-      borderRadius: "10px",
-      background: "#333",
-      color: "#fff",
-    },
-  });
+  const error = () =>
+    toast.error("Error sending your message", {
+      id: "error",
+      style: {
+        borderRadius: "10px",
+        background: "#333",
+        color: "#fff",
+      },
+    });
+
+  const success = () =>
+    toast.success("Message sent successfully", {
+      id: "success",
+      style: {
+        borderRadius: "10px",
+        background: "#333",
+        color: "#fff",
+      },
+    });
+
+  const empty = () => {
+    toast.error("Please fill the required fields", {
+      id: "error",
+      style: {
+        borderRadius: "10px",
+        background: "#333",
+        color: "#fff",
+      },
+    });
+  };
   const handleChange = ({ target }) => {
     const { id, value } = target;
     value.length === 0 ? setIsSending(false) : setIsSending(true);
@@ -252,7 +253,7 @@ const Contact = () => {
             </h1>
           </div>
           <h2 className="text-[1.65rem] font-medium md:max-w-lg w-full mt-2 seq">
-            Let's Get In Touch.
+            {"Let's Get In Touch."}
           </h2>
         </div>
 
@@ -382,6 +383,6 @@ const Contact = () => {
       `}</style>
     </section>
   );
-};
+}
 
 export default Contact;
