@@ -252,7 +252,7 @@ const Contact = () => {
             </h1>
           </div>
           <h2 className="text-[1.65rem] font-medium md:max-w-lg w-full mt-2 seq">
-            Let's Get In Touch.{" "}
+            Let's Get In Touch.
           </h2>
         </div>
 
