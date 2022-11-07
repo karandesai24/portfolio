@@ -36,7 +36,7 @@ const Hero = () => {
       );
 
     return () => typed.destroy();
-  }, [typedEl, targetSection, options]);
+  }, [typedEl, targetSection]);
 
   // useEffect(() => {
   //   lottie.loadAnimation({
