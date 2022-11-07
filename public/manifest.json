@@ -1,0 +1,33 @@
+{
+  "theme_color": "#7000FF",
+  "background_color": "#120E16",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "name": "Karan Desai | Portfolio",
+  "short_name": "Karan Desai",
+  "description": "Karan Desai's Portfolio Website.",
+  "icons": [
+    {
+      "src": "/avatar.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/avatar.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/avatar.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/avatar.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
